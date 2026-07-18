@@ -1,0 +1,34 @@
+{
+  "id": "1-1-2",
+  "title": "根据截图还原页面",
+  "description": "仅依据一张桌面端参考截图，还原页面的视觉、布局与细节，并合理推断移动端响应式行为。",
+  "ability": "编码能力/前端",
+  "difficulty": 4,
+  "tags": [
+    { "path": "编码能力/前端", "weight": 10 },
+    { "path": "多模态能力/界面理解", "weight": 7 },
+    { "path": "内容能力/设计", "weight": 4 },
+    { "path": "内容能力/审美", "weight": 4 }
+  ],
+  "scoreRange": [0, 100],
+  "workflow": {
+    "prompt": "prompts/task.md",
+    "rubric": "prompts/rubric.md",
+    "checker": "tools/check-deliverable.ps1",
+    "inputs": [
+      {
+        "source": "reference/target-desktop.png",
+        "destination": "reference/target-desktop.png"
+      }
+    ],
+    "screenshots": {
+      "enabled": true,
+      "type": "static",
+      "entrypoint": "index.html",
+      "viewports": [
+        { "name": "desktop", "width": 1440, "height": 1000 },
+        { "name": "mobile", "width": 390, "height": 844 }
+      ]
+    }
+  }
+}
