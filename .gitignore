@@ -1,0 +1,10 @@
+# Playwright MCP browser session logs
+.playwright-mcp/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
